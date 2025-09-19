@@ -1,0 +1,40 @@
+/*
+* Course: Competitive Programming Sessional (CCE-2310)
+* Assignment: beecrowd BEGINNER 1000–1050
+* Problem ID: 1099
+* Author: Jannatul Naima Tuli (ID:E243430)
+* Language/Version: C++20
+* beecrowd Profile: https://judge.beecrowd.com/en/profile/1182493
+* Date: 2025-09-17
+* Statement: 
+https://judge.beecrowd.com/en/problems/view/1099
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+   int N;
+   cin >> N;
+ 
+   while (N--) {
+       int X, Y;
+       cin >> X >> Y;
+ 
+       // Ensure X is smaller than Y
+       if (X > Y) swap(X, Y);
+ 
+       int sum = 0;
+       // Sum all odd numbers strictly between X and Y
+       for (int i = X + 1; i < Y; i++) {
+           if (i % 2 != 0) {
+               sum += i;
+           }
+       }
+ 
+       cout << sum << endl;
+   }
+ 
+   return 0;
+}
