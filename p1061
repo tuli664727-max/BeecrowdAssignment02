@@ -1,0 +1,49 @@
+/*
+* Course: Competitive Programming Sessional (CCE-2310)
+* Assignment: beecrowd BEGINNER 1000–1050
+* Problem ID: 1061
+* Author: Jannatul Naima Tuli (ID:E243430)
+* Language/Version: C++20
+* beecrowd Profile: https://judge.beecrowd.com/en/profile/1182493
+* Date: 2025-09-17
+* Statement: 
+https://judge.beecrowd.com/en/problems/view/1061
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+ 
+int main() {
+   int startDay, endDay;
+   int sh, sm, ss; // start hour, minute, second
+   int eh, em, es; // end hour, minute, second
+   
+   string temp;
+   
+   // Input format: Dia X
+   cin >> temp >> startDay;
+   cin >> sh >> temp >> sm >> temp >> ss;
+   cin >> temp >> endDay;
+   cin >> eh >> temp >> em >> temp >> es;
+ 
+   // Convert everything to seconds
+   int startInSeconds = startDay * 24 * 3600 + sh * 3600 + sm * 60 + ss;
+   int endInSeconds   = endDay   * 24 * 3600 + eh * 3600 + em * 60 + es;
+ 
+   int diff = endInSeconds - startInSeconds;
+ 
+   int days    = diff / (24 * 3600);
+   diff       %= (24 * 3600);
+   int hours   = diff / 3600;
+   diff       %= 3600;
+   int minutes = diff / 60;
+   int seconds = diff % 60;
+ 
+   cout << days << " dia(s)" << endl;
+   cout << hours << " hora(s)" << endl;
+   cout << minutes << " minuto(s)" << endl;
+   cout << seconds << " segundo(s)" << endl;
+ 
+   return 0;
+}
