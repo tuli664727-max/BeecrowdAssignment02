@@ -1,0 +1,53 @@
+/*
+* Course: Competitive Programming Sessional (CCE-2310)
+* Assignment: beecrowd BEGINNER 1000–1050
+* Problem ID: 1094
+* Author: Jannatul Naima Tuli (ID:E243430)
+* Language/Version: C++20
+* beecrowd Profile: https://judge.beecrowd.com/en/profile/1182493
+* Date: 2025-09-17
+* Statement: 
+https://judge.beecrowd.com/en/problems/view/1094
+*/
+
+
+
+#include <iostream>
+#include <iomanip> // for std::fixed and std::setprecision
+using namespace std;
+ 
+int main() {
+   int N;
+   cin >> N;
+ 
+   int totalAnimals = 0;
+   int totalRabbits = 0, totalRats = 0, totalFrogs = 0;
+ 
+   for (int i = 0; i < N; i++) {
+       int amount;
+       char type;
+       cin >> amount >> type;
+ 
+       totalAnimals += amount;
+ 
+       if (type == 'C') {
+           totalRabbits += amount;
+       } else if (type == 'R') {
+           totalRats += amount;
+       } else if (type == 'S') {
+           totalFrogs += amount;
+       }
+   }
+ 
+   cout << "Total: " << totalAnimals << " cobaias" << endl;
+   cout << "Total de coelhos: " << totalRabbits << endl;
+   cout << "Total de ratos: " << totalRats << endl;
+   cout << "Total de sapos: " << totalFrogs << endl;
+ 
+   cout << fixed << setprecision(2);
+   cout << "Percentual de coelhos: " << (totalRabbits * 100.0 / totalAnimals) << " %" << endl;
+   cout << "Percentual de ratos: " << (totalRats * 100.0 / totalAnimals) << " %" << endl;
+   cout << "Percentual de sapos: " << (totalFrogs * 100.0 / totalAnimals) << " %" << endl;
+ 
+   return 0;
+}
