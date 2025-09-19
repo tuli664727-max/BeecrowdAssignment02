@@ -1,0 +1,53 @@
+/*
+* Course: Competitive Programming Sessional (CCE-2310)
+* Assignment: beecrowd BEGINNER 1000–1050
+* Problem ID: 1075
+* Author: Jannatul Naima Tuli (ID:E243430)
+* Language/Version: C++20
+* beecrowd Profile: https://judge.beecrowd.com/en/profile/1182493
+* Date: 2025-09-17
+* Statement: 
+https://judge.beecrowd.com/en/problems/view/1075
+*/
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+   int N;
+   cin >> N;
+ 
+   for (int i = 1; i <= 10000; i++) {
+       if (i % N == 2) {
+           cout << i << endl;
+       }
+   }
+ 
+   return 0;
+}
+1072
+#include <iostream>
+using namespace std;
+ 
+int main() {
+   int N;
+   cin >> N;
+ 
+   int inCount = 0, outCount = 0;
+ 
+   for (int i = 0; i < N; i++) {
+       int X;
+       cin >> X;
+ 
+       if (X >= 10 && X <= 20) {
+           inCount++;
+       } else {
+           outCount++;
+       }
+   }
+ 
+   cout << inCount << " in" << endl;
+   cout << outCount << " out" << endl;
+ 
+   return 0;
+}
