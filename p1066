@@ -1,0 +1,45 @@
+/*
+* Course: Competitive Programming Sessional (CCE-2310)
+* Assignment: beecrowd BEGINNER 1000–1050
+* Problem ID: 1066
+* Author: Jannatul Naima Tuli (ID:E243430)
+* Language/Version: C++20
+* beecrowd Profile: https://judge.beecrowd.com/en/profile/1182493
+* Date: 2025-09-17
+* Statement: 
+https://judge.beecrowd.com/en/problems/view/1066
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+   int n;
+   int even = 0, odd = 0, positive = 0, negative = 0;
+ 
+   for (int i = 0; i < 5; i++) {
+       cin >> n;
+ 
+       // Count even or odd
+       if (n % 2 == 0) {
+           even++;
+       } else {
+           odd++;
+       }
+ 
+       // Count positive or negative
+       if (n > 0) {
+           positive++;
+       } else if (n < 0) {
+           negative++;
+       }
+   }
+ 
+   cout << even << " valor(es) par(es)" << endl;
+   cout << odd << " valor(es) impar(es)" << endl;
+   cout << positive << " valor(es) positivo(s)" << endl;
+   cout << negative << " valor(es) negativo(s)" << endl;
+ 
+   return 0;
+}
