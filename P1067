@@ -1,0 +1,28 @@
+/*
+* Course: Competitive Programming Sessional (CCE-2310)
+* Assignment: beecrowd BEGINNER 1000–1050
+* Problem ID: 1067 
+* Author: Jannatul Naima Tuli (ID:E243430)
+* Language/Version: C++20
+* beecrowd Profile: https://judge.beecrowd.com/en/profile/1182493
+* Date: 2025-09-17
+* Statement: 
+https://judge.beecrowd.com/en/problems/view/1067
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+   int X;
+   cin >> X;
+ 
+   for (int i = 1; i <= X; i++) {
+       if (i % 2 != 0) {
+           cout << i << endl;
+       }
+   }
+ 
+   return 0;
+}
