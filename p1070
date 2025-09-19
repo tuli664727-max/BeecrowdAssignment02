@@ -1,0 +1,33 @@
+/*
+* Course: Competitive Programming Sessional (CCE-2310)
+* Assignment: beecrowd BEGINNER 1000–1050
+* Problem ID: 1070
+* Author: Jannatul Naima Tuli (ID:E243430)
+* Language/Version: C++20
+* beecrowd Profile: https://judge.beecrowd.com/en/profile/1182493
+* Date: 2025-09-17
+* Statement: 
+https://judge.beecrowd.com/en/problems/view/1070
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+   int X;
+   cin >> X;
+ 
+   // If X is even, start from the next odd number
+   if (X % 2 == 0) {
+       X++;
+   }
+ 
+   // Print 6 consecutive odd numbers
+   for (int i = 0; i < 6; i++) {
+       cout << X + i * 2 << endl;
+   }
+ 
+   return 0;
+}
+ 
